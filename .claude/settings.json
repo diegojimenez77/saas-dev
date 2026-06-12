@@ -1,0 +1,14 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(node -e \"const clerk = require\\('@clerk/react'\\); console.log\\(Object.keys\\(clerk\\).filter\\(k => k.toLowerCase\\(\\).includes\\('sign'\\) || k.toLowerCase\\(\\).includes\\('show'\\) || k.toLowerCase\\(\\).includes\\('auth'\\)\\)\\)\")",
+      "Bash(node -e \"const {Show} = require\\('@clerk/react'\\); console.log\\(Show.toString\\(\\).slice\\(0,500\\)\\)\")",
+      "Bash(node -e \"const pkg = require\\('./node_modules/@clerk/nextjs/package.json'\\); console.log\\(pkg.version\\)\")",
+      "Bash(node -e \"const pkg = require\\('./node_modules/@clerk/nextjs/dist/docs/index.js'\\)\")",
+      "Bash(xargs grep -l \"CheckAuthorizationWithCustomPermissions\\\\|has\\(\")",
+      "Bash(xargs grep -l \"plan\")",
+      "Bash(xargs grep -l \"CheckAuthorizationParams\\\\|has.*plan\")",
+      "Bash(xargs ls)"
+    ]
+  }
+}
